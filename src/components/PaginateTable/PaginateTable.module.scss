@@ -1,0 +1,66 @@
+.paginateContainer {
+    width: 100%;
+    height: 33px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    button {
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 33px;
+        color: #474955;
+        background-color: transparent;
+
+        &:disabled {
+            cursor: default;
+        }
+    }
+
+    .btnBack {
+        margin-left: 40px;
+        cursor: pointer;
+
+        @media (max-width: 768px) {
+            margin-left: 10px;
+          }
+    }
+
+    .pageCount {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+        .pageItem {
+            font-style: italic;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 25px;
+            margin-right: 15px;
+            color: #474955;
+
+            &Active {
+                font-style: italic;
+                font-weight: 700;
+                font-size: 18px;
+                line-height: 25px;
+                margin-right: 15px;
+                color: #7EBC3C;
+            }
+        }
+        .pageItem:nth-last-child(1) {
+            margin-right: 0;
+        }
+    }
+
+    .btnForward {
+        margin-right: 25px;
+        cursor: pointer;
+
+        @media (max-width: 768px) {
+            margin-right: 10px;
+          }
+    }
+}

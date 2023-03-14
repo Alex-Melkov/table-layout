@@ -1,6 +1,5 @@
 const path = require('path');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
-const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const TerserWebpackPlugin = require('terser-webpack-plugin');
@@ -48,11 +47,11 @@ const plugins = () => {
   const base = [
     new HTMLWebpackPlugin({
       template: './index.html',
+      favicon: './favicon.ico',
       minify: {
         collapseWhitespace: isProd,
       },
     }),
-    new FaviconsWebpackPlugin('./favicon.ico'),
     new MiniCssExtractPlugin({
       filename: `css/${filename('css')}`,
     }),

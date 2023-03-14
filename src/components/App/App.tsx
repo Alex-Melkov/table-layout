@@ -18,6 +18,12 @@ const App: React.FC = () => {
 
   React.useEffect(() => {
     dispatch(fetchPosts(pageNumber));
+    const url = new URL(window.location.href);
+    if (url.searchParams.has('pageNumber')) {
+      url.searchParams.delete('pageNumber')
+    }
+    url.searchParams.append("pageNumber", `${pageNumber}`);
+    window.history.replaceState(null, '', url)
   }, [pageNumber]);
 
   React.useEffect(() => {

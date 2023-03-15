@@ -25,11 +25,12 @@ https://alex-melkov.github.io/table-layout/
 
 Список данных взят с сайта: jsonplaceholder
 
-## TypeScript - React - SCSS
+## TypeScript - React - Redux ToolKit - SCSS
 
 В данном проекте используются технологии:
 
 - React
 - TypeScript
+- Redux ToolKit
 - React content loader
 - SASS
